@@ -155,24 +155,28 @@ class FirstOne extends Component {
           filter: 'blur(5px)',
         },
       })
-    },1000)
+    },100)
   }
   
   render() {
     return (
       <div style={mainStyle}>
         <div style={this.state.firstOneStyle}>
-          <img src={require('./pics/first1.jpeg')} alt=""/>
+          {/* <img src={require('./pics/first1.jpeg')} alt=""/> */}
+          <img src="https://s1.ax1x.com/2020/09/04/wkHk4g.png" alt=""/>
         </div>
         <div style={this.state.firstTwoStyle}>
-          <img src={require('./pics/first2.jpeg')} alt=""/>
+          {/* <img src={require('./pics/first2.jpeg')} alt=""/> */}
+          <img src="https://s1.ax1x.com/2020/09/04/wkH8C4.png" alt=""/>
         </div>
         <div className="imgShow" style={imgShow}>
           <div className="imgOne" style={this.state.oneStyle}>
-            <img src={require('./pics/one.jpeg')} alt=""/>
+            {/* <img src={require('./pics/one.jpeg')} alt=""/> */}
+            <img src='https://s1.ax1x.com/2020/09/04/wF6YtK.png' alt=""/>
           </div>
           <div className="imgTwo" style={this.state.twoStyle}>
-            <img src={require('./pics/two.jpeg')} alt=""/>
+            {/* <img src={require('./pics/two.jpeg')} alt=""/> */}
+            <img src='https://s1.ax1x.com/2020/09/04/wF6kmn.jpg' alt=""/>
           </div>
         </div>
         <div className="buttonBox" style={buttonBox}>

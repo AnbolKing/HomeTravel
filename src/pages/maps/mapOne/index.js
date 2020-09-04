@@ -153,8 +153,8 @@ class mapOne extends Component {
 
   handleFull() {
     return (
-        <div style={this.state.get?fullAfterStyle:fullBeforeStyle}>
-          <img src={require('../pics/test.png')} alt=""/>
+        <div style={this.state.get?fullAfterStyle:fullBeforeStyle} onClick={this.handleShutFull}>
+          <img src={require('../pics/full.png')} alt=""/>
         </div>
     )
   }
