@@ -1,35 +1,31 @@
-export const firstOneStyle = {
-  height:'100%',
-  width:'100%',
-}
-
 export const mainStyle = {
-  marginTop:'0.2rem',
   position:'relative'
 }
 
-export const firstTwoStyle = {
+export const imgShow = {
+  // position: 'fixed',
+  // left: '50%',
+  // top: '50%',
+  // marginLeft:'-150px',
+  // marginTop:'-143.5px',
+}
+
+export const buttonBox = {
   position:'absolute',
-  display:'none',
-  height:'100%',
-  width:'100%'
+  left:'50%',
+  transform:'translateX(-50%)',
+  bottom:'10%'
 }
 
-export const textone = {
-  textAlign:'left',
-  fontSize:'0.17rem',
-  fontFamily:'微软雅黑',
-}
-
-export const texttwo = {
-  paddingTop:'0.1rem',
-  textAlign:'left',
-  fontSize:'0.17rem',
-  fontFamily:'微软雅黑',
-}
-
-export const textone_one = {
-  textAlign:'left',
-  fontSize:'0.14rem',
-  fontFamily:'微软雅黑',
+export const buttonStyle = {
+  width:'1.22rem',
+  height:'0.52rem',
+  textAlign:'center',
+  color:'white',
+  background:'lightgray',
+  borderRadius:'0.1rem',
+  borderColor:'none',
+  marginTop:'0.1rem',
+  boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+  fontSize:'0.15rem'
 }

@@ -1,5 +1,5 @@
 export const backStyle = {
-  background: `url(${require("./pics/AllThingsBack.png")})`,
+  background: `url(${require("../Collections/pics/AllThingsBack.png")})`,
   backgroundSize:'cover',
   backgroundRepeat: 'no-repeat',
   height:'100%',
@@ -9,7 +9,7 @@ export const backStyle = {
 }
 
 export const FirstStyle = {
-  paddingTop:'0.2rem',
+  // paddingTop:'0.2rem',
 }
 
 export const arrowStyle = {
@@ -48,19 +48,25 @@ export const naviStyle = {
 export const naviTextStyle = {
   fontSize:'0.15rem',
   textAlign:'left',
-  fontFamily:'微软雅黑',
   paddingTop:'0.2rem',
   paddingLeft:'0.2rem',
-  paddingRight:'0.2rem'
+  paddingRight:'0.2rem',
+  webkitUserSelect:'none',  
+  mozUserSelect:'none',  
+  oUserSelect:'none',  
+  msUserSelect:'none',
 }
 
 export const chanaviTextStyle = {
   fontSize:'0.15rem',
   textAlign:'center',
-  fontFamily:'微软雅黑',
   paddingTop:'0.2rem',
   paddingLeft:'0.2rem',
-  paddingRight:'0.2rem'
+  paddingRight:'0.2rem',
+  webkitUserSelect:'none',  
+  mozUserSelect:'none',  
+  oUserSelect:'none',  
+  msUserSelect:'none',
 }
 
 export const contentStyle = {
@@ -82,7 +88,11 @@ export const headerStyle = {
 export const textStyle = {
   fontSize:'0.13rem',
   width:'33.3%',
-  textAlign:'center'
+  textAlign:'center',
+  webkitUserSelect:'none',  
+  mozUserSelect:'none',  
+  oUserSelect:'none',  
+  msUserSelect:'none',
 }
 
 export const dividerStyle = {
@@ -115,5 +125,9 @@ export const itemUniqStyle = {
 export const textItemStyle = {
   fontSize:'0.13rem',
   width:'33.3%',
-  textAlign:'center'
+  textAlign:'center',
+  webkitUserSelect:'none',  
+  mozUserSelect:'none',  
+  oUserSelect:'none',  
+  msUserSelect:'none',
 }

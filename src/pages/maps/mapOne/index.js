@@ -14,7 +14,6 @@ import {
   containStyle,
   detailStyle,
   shadowStyle,
-  boxStyle,
   fullBeforeStyle,
   fullAfterStyle
 } from './style';
@@ -24,7 +23,8 @@ import {
 } from '@ant-design/icons';
 import { Button, message } from 'antd';
 import axios from 'axios';
-import { BulbTwoTone, SmileTwoTone } from '@ant-design/icons';
+import { SmileTwoTone } from '@ant-design/icons';
+import '../config/style.css';
 import DetailOne from '../../DetailOne/index';
 import store from '../../../store/index';
 
@@ -65,6 +65,7 @@ class mapOne extends Component {
     }
     else {
       setTimeout(() => {
+        message.destroy();
         message.success({
           content:'恭喜你找到了一个物品！',
           duration:1,
@@ -105,6 +106,7 @@ class mapOne extends Component {
       return ;
     }
     else {
+      message.destroy();
       message.warning({
         content:'你已经收集她啦~再去找找其他物品吧！',
         duration:1,
@@ -152,7 +154,7 @@ class mapOne extends Component {
   handleFull() {
     return (
         <div style={this.state.get?fullAfterStyle:fullBeforeStyle}>
-          <img src={require('../pics/full.png')} alt=""/>
+          <img src={require('../pics/test.png')} alt=""/>
         </div>
     )
   }
@@ -198,22 +200,22 @@ class mapOne extends Component {
         </div>
         <img src={require('../pics/roomOne.png')} alt=""/>
         <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,1)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im2Style} onClick={this.handleGet.bind(this,2)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im3Style} onClick={this.handleGot.bind(this,17)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im4Style} onClick={this.handleGot.bind(this,10)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im5Style} onClick={this.handleGot.bind(this,19)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div style={containStyle}>
-          <div style={buttonContainerStyle}>
+          <div style={buttonContainerStyle} className="buttonContainer">
             <Button type="primary" style={buttonStyle} onClick={this.handleColl.bind(this)}>已收集</Button>
             <Button type="primary" style={buttonStyle} onClick={this.handleLine.bind(this)}>线下引导</Button>
           </div>

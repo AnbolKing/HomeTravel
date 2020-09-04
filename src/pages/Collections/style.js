@@ -1,5 +1,6 @@
 export const backStyle = {
   background: `url(${require("./pics/AllThingsBack.png")})`,
+  // background:'url("https://imgchr.com/i/wFN3jK")',
   backgroundSize:'cover',
   backgroundRepeat: 'no-repeat',
   height:'100%',
@@ -9,7 +10,7 @@ export const backStyle = {
 }
 
 export const FirstStyle = {
-  paddingTop:'0.2rem',
+  // paddingTop:'0.2rem',
 }
 
 export const arrowStyle = {
@@ -66,4 +67,8 @@ export const descStyle = {
   lineHeight:'0.15rem',
   color:'gray',
   textIndent:'4em',
+  webkitUserSelect:'none',  
+  mozUserSelect:'none',  
+  oUserSelect:'none',  
+  msUserSelect:'none',
 }

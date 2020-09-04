@@ -11,7 +11,6 @@ import {
   detailStyle,
   shadowStyle,
   imStyle,
-  boxStyle,
   im2Style,
   im3Style,
   fullBeforeStyle,
@@ -23,8 +22,9 @@ import {
 } from '@ant-design/icons';
 import { Button, message } from 'antd';
 import axios from 'axios';
-import { BulbTwoTone, SmileTwoTone } from '@ant-design/icons';
+import { SmileTwoTone } from '@ant-design/icons';
 import DetailOne from '../../DetailOne/index';
+import '../config/style.css';
 import store from '../../../store/index';
 
 class mapThree extends Component {
@@ -64,6 +64,7 @@ class mapThree extends Component {
     }
     else {
       setTimeout(() => {
+        message.destroy();
         message.success({
           content:'恭喜你找到了一个物品！',
           duration:1,
@@ -106,6 +107,7 @@ class mapThree extends Component {
       return ;
     }
     else {
+      message.destroy();
       message.warning({
         content:'它已经收集了哦~再去找找其他物品吧！',
         duration:1,
@@ -198,19 +200,19 @@ class mapThree extends Component {
         </div>
         <img src={require('../pics/roomThree.png')} alt=""/>
         <div className="num2" style={num2Style} onClick={this.handleGet.bind(this,4)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={imStyle} onClick={this.handleGot.bind(this,16)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im2Style} onClick={this.handleGot.bind(this,13)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im3Style} onClick={this.handleGot.bind(this,18)}>
-          <img src={require('../pics/im.png')} alt="" style={imgStyle}/>
+          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>
         <div style={containStyle}>
-          <div style={buttonContainerStyle}>
+          <div style={buttonContainerStyle} className="buttonContainer">
             <Button type="primary" style={buttonStyle} onClick={this.handleColl.bind(this)}>已收集</Button>
             <Button type="primary" style={buttonStyle} onClick={this.handleLine.bind(this)}>线下引导</Button>
           </div>

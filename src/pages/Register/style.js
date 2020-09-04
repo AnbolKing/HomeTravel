@@ -1,5 +1,5 @@
 export const containStyle = {
-  marginTop:'0.2rem'
+  // marginTop:'0.2rem'
 }
 
 export const backStyle = {

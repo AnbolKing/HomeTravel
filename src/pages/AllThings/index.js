@@ -55,7 +55,7 @@ class AllThings extends Component {
       <div style={FirstStyle}>
         <div style={backStyle}></div>
         <div className="arrow" style={arrowStyle} onClick={this.handleBack.bind(this)}>
-          <img src={require('./pics/arrow.png')} alt="" style={arrowInsideStyle}/>
+          <img src={require('../Collections/pics/arrow.png')} alt="" style={arrowInsideStyle}/>
         </div>
         <div className="navi" style={naviStyle}>
           <div style={fuzhu}>

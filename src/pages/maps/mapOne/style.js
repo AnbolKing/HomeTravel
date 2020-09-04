@@ -45,7 +45,7 @@ export const imgStyle = {
 
 export const mapsStyle = {
   position:'relative',
-  marginTop:'0.2rem'
+  // marginTop:'0.2rem'
 }
 
 export const rightStyle = {
@@ -65,30 +65,25 @@ export const leftStyle = {
 }
 
 export const containStyle = {
-  width:'100%',
-  position:'fixed',
-  // background: `url(${require("../../Login/pics/title.png")})`,
-  // backgroundSize:'80% 85%',
-  // backgroundRepeat:'no-repeat'
+  width:'30%',
+  position:'absolute',
+  top:'74%',
+  left:'148%'
 }
 
 export const buttonContainerStyle = {
   display:'flex',
-  flexDirection:'row',
-  justifyContent:'space-around',
+  flexDirection:'column',
   flexWrap: 'wrap',
-  paddingBottom:'0.2rem'
 }
 
 export const buttonStyle = {
-  marginTop:'0.1rem',
-  width:'100px',
-  // width: '33.3%',
-  // minWidth: '33.3%',
-  // maxWidth: '33.3%',
-  height:'0.4rem',
-  borderRadius:'0.2rem',
-  fontSize:'0.15rem'
+  marginTop:'0.3rem',
+  width:'0.86rem',
+  height:'0.32rem',
+  boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+  borderRadius:'0.09rem',
+  background:'#E3A78D'
 }
 
 export const detailStyle = {
@@ -110,7 +105,7 @@ export const shadowStyle = {
 
 export const boxStyle = {
   width:'2.3rem',
-  background: `url(${require("../pics/dis2.png")})`,
+  // background: `url(${require("../pics/dis2.png")})`,
   backgroundSize:'cover',
   backgroundRepeat: 'no-repeat',
   borderRadius:'0.11rem',

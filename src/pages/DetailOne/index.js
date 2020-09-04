@@ -40,7 +40,7 @@ class DetailOne extends Component {
     return (
       <div className="tip" style={tipStyle}>
         <div className="circle" style={circleStyle}>
-          <img src={require('./pics/'+this.state.id+'.png')} alt="" style={imgStyle}/>
+          <img src={require('../Collections/pics/'+this.state.id+'.png')} alt="" style={imgStyle}/>
         </div>
         <div className="text" style={textStyle}>
           {this.state.imgText}
