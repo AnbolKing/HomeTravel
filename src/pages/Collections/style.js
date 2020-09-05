@@ -1,6 +1,6 @@
 export const backStyle = {
-  background: `url(${require("./pics/AllThingsBack.png")})`,
-  // background:'url("https://imgchr.com/i/wFN3jK")',
+  // background: `url(${require("./pics/AllThingsBack.png")})`,
+  background:'url("https://s1.ax1x.com/2020/09/04/wFN3jK.png")',
   backgroundSize:'cover',
   backgroundRepeat: 'no-repeat',
   height:'100%',

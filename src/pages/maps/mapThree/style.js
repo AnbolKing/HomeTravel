@@ -33,25 +33,32 @@ export const leftStyle = {
 }
 
 export const containStyle = {
-  width:'30%',
-  position:'absolute',
-  top:'78%',
-  left:'88%'
+  width:'100%',
+  position:'fixed',
+  top:'87%',
+  left:'3%'
 }
 
 export const buttonContainerStyle = {
   display:'flex',
-  flexDirection:'column',
+  flexDirection:'row',
   flexWrap: 'wrap',
 }
 
 export const buttonStyle = {
-  marginTop:'0.3rem',
-  width:'0.86rem',
-  height:'0.32rem',
-  boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
-  borderRadius:'0.09rem',
-  background:'#E3A78D'
+  // 原来的悬浮于图片上面的按钮
+  // marginTop:'0.3rem',
+  // width:'0.86rem',
+  // height:'0.32rem',
+  // boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+  // borderRadius:'0.09rem',
+  // background:'#E3A78D'
+  margin:'0 auto',
+  marginTop:'0.02rem',
+}
+
+export const textStyle = {
+  textAlign:'center'
 }
 
 
@@ -115,4 +122,14 @@ export const fullBeforeStyle = {
 export const fullAfterStyle = {
   opacity:1,
   transition: 'all 1s',
+}
+
+export const tipStyle = {
+  position:'fixed',
+  color:'#915032',
+  fontSize:'0.12rem',
+  top:'0.2rem',
+  left:'50%',
+  transform:'translate(-50%)',
+  letterSpacing:'0.03rem'
 }

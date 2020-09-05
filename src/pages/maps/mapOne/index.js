@@ -15,13 +15,15 @@ import {
   detailStyle,
   shadowStyle,
   fullBeforeStyle,
-  fullAfterStyle
+  fullAfterStyle,
+  textStyle,
+  tipStyle
 } from './style';
 import {
   RightCircleOutlined,
   LeftCircleOutlined
 } from '@ant-design/icons';
-import { Button, message } from 'antd';
+import { message } from 'antd';
 import axios from 'axios';
 import { SmileTwoTone } from '@ant-design/icons';
 import '../config/style.css';
@@ -178,6 +180,9 @@ class mapOne extends Component {
   render() {
     return (
       <div style={mapsStyle}>
+        <div className="tipText" style={tipStyle}>
+          可左右滑动查看完整地图喔
+        </div>
         <div style={leftStyle} onClick={this.handleLeft}>
           <LeftCircleOutlined />
         </div>
@@ -216,8 +221,24 @@ class mapOne extends Component {
         </div>
         <div style={containStyle}>
           <div style={buttonContainerStyle} className="buttonContainer">
-            <Button type="primary" style={buttonStyle} onClick={this.handleColl.bind(this)}>已收集</Button>
-            <Button type="primary" style={buttonStyle} onClick={this.handleLine.bind(this)}>线下引导</Button>
+            <div className="collection" style={buttonStyle} onClick={this.handleColl.bind(this)}>
+              <div className="img">
+                <img src={require('../pics/story.png')} alt=""/>
+              </div>
+              <div className="text" style={textStyle}>
+                已收集
+              </div>
+            </div>
+            <div className="guide" style={buttonStyle} onClick={this.handleLine.bind(this)}>
+              <div className="img">
+                <img src={require('../pics/list.png')} alt=""/>
+              </div>
+              <div className="text" style={textStyle}>
+                收集进度
+              </div>
+            </div>
+            {/* <Button type="primary" style={buttonStyle} onClick={this.handleColl.bind(this)}>已收集</Button>
+            <Button type="primary" style={buttonStyle} onClick={this.handleLine.bind(this)}>线下引导</Button> */}
           </div>
         </div>
       </div>
