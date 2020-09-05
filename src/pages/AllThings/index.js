@@ -18,6 +18,7 @@ import {
   itemUniqStyle
 } from './style';
 import store from '../../store/index';
+import axios from 'axios';
 import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'
 
 class AllThings extends Component {
@@ -30,18 +31,47 @@ class AllThings extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      list:store.getState().toJS().mapReducer.list
-    })
-    let num = 0;
-    store.getState().toJS().mapReducer.list.map(item => {
-      if(item.getOline) {
-        num++;
+    let token = store.getState().toJS().mapReducer.token
+    let url = 'http://112.124.26.56:8999/api/list';
+    axios.get(url,{
+      headers:{
+        'Content-Type':'application/json',
+        'Accept':'*/*',
+        'Authorization':token
       }
+    }).then(res => {
+      const result = res.data;
+      const data = result.data.objList;
+      const list = [];
+      data.forEach(item => {
+        list.push({
+          id:item.ObjID,
+          name:(item.Text.split(":"))[0],
+          getOline:true,
+          getOffline:false
+        })
+      });
+      const action = {
+        type:'check_list',
+        list:list,
+      }
+      store.dispatch(action);
+
+      //从后端获取进度后再次从sotre获取进度同步state
+      this.setState({
+        list:store.getState().toJS().mapReducer.list
+      })
+      let num = 0;
+      store.getState().toJS().mapReducer.list.map(item => {
+        if(item.getOline) {
+          num++;
+        }
+      });
+      this.setState({
+        allIn:num
+      })
+  
     });
-    this.setState({
-      allIn:num
-    })
     console.log(this.state.list);
     console.log(this.state.allIn);
   }

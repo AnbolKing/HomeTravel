@@ -21,7 +21,7 @@ const defaultState = {
   ],
   number:0,
   token:'',
-  username:'王子安'
+  username:''
 }
 
 export default (state = defaultState,action) => {
@@ -80,6 +80,11 @@ export default (state = defaultState,action) => {
         newstate.judge = obj;
         break;
     }
+    return newstate;
+  }
+  if(action.type === 'check_list') {
+    const newstate = JSON.parse(JSON.stringify(state));
+    newstate.list = action.list;
     return newstate;
   }
   return state;
