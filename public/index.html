@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -44,7 +44,7 @@
     function resetWidth() {      // 兼容ie浏览器 document.body.clientWidth
              
         var baseWidth = document.documentElement.clientWidth || document.body.clientWidth;     
-        console.log(baseWidth);      // 默认的设置是375px(ip6)的根元素设为100px, 其他的手机都相对这个进行调整
+        //console.log(baseWidth);      // 默认的设置是375px(ip6)的根元素设为100px, 其他的手机都相对这个进行调整
              
         document.documentElement.style.fontSize = baseWidth / 375 * 100 + 'px'   
     }   

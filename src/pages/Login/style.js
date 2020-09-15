@@ -3,9 +3,11 @@ export const containStyle = {
 }
 
 export const backStyle = {
-  backgroundColor:'pink',
-  width:'100%',
+  background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/AllThingsBack.png")',
+  backgroundSize:'cover',
+  backgroundRepeat: 'no-repeat',
   height:'100%',
+  width:'100%',
   position:'fixed',
   zIndex:-1,
 }

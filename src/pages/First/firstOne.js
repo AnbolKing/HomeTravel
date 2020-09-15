@@ -205,21 +205,17 @@ class FirstOne extends Component {
     return (
       <div style={mainStyle}>
         <div style={this.state.firstOneStyle}>
-          {/* <img src={require('./pics/first1.jpeg')} alt=""/> */}
-          <img src="https://s1.ax1x.com/2020/09/04/wkHk4g.png" alt=""/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg" alt=""/>
         </div>
         <div style={this.state.firstTwoStyle}>
-          {/* <img src={require('./pics/first2.jpeg')} alt=""/> */}
-          <img src="https://s1.ax1x.com/2020/09/04/wkH8C4.png" alt=""/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/first2.jpeg" alt=""/>
         </div>
         <div className="imgShow" style={imgShow}>
           <div className="imgOne" style={this.state.oneStyle}>
-            {/* <img src={require('./pics/one.jpeg')} alt=""/> */}
-            <img src="https://s1.ax1x.com/2020/09/04/wF6YtK.png" alt=""/>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/one.jpeg" alt=""/>
           </div>
           <div className="imgTwo" style={this.state.twoStyle}>
-            {/* <img src={require('./pics/two.jpeg')} alt=""/> */}
-            <img src="https://s1.ax1x.com/2020/09/04/wF6kmn.jpg" alt=""/>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/two.jpeg" alt=""/>
           </div>
         </div>
         <div className="buttonBox" style={buttonBox}>

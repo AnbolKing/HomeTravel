@@ -146,11 +146,11 @@ class Login extends Component {
         <Spin spinning={this.state.isLoading} style={SpinContain} tip={this.state.percent}>
         <div style={backStyle}></div>
         <div className="title-img" style={imgContainStyle}>
-          <img src={require('./pics/title.png')} alt="" style={imgStyle}/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/title.png" alt="" style={imgStyle}/>
         </div>
         <div style={boxContain}>
-          <Input id="user" size="large" placeholder="学号" prefix={<UserOutlined />} style={inputStyle} onChange={this.handleUser} value={this.state.user}/>
-          <Input.Password id="pass" size="large" placeholder="密码" prefix={<LockOutlined  />} style={inputStyle} onChange={this.handleChangePsss} value={this.state.pass}/>
+          <Input id="user" size="large" placeholder="请输入学号" prefix={<UserOutlined />} style={inputStyle} onChange={this.handleUser} value={this.state.user}/>
+          <Input.Password id="pass" size="large" placeholder="使用云家园密码登录哦" prefix={<LockOutlined  />} style={inputStyle} onChange={this.handleChangePsss} value={this.state.pass}/>
         </div>
         <div style={buttonContainer}>
           <Button type="primary" style={buttonStyle} onClick={this.handleSubmit}>登录</Button>
