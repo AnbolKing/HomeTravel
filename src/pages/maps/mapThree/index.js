@@ -206,16 +206,16 @@ class mapThree extends Component {
         {/* <img src="https://s1.ax1x.com/2020/09/15/wsoUqx.png" alt=""/> */}
         <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png" alt=""/>
         <div className="num2" style={num2Style} onClick={this.handleGet.bind(this,4)}>
-          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={imStyle} onClick={this.handleGot.bind(this,16)}>
-          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im2Style} onClick={this.handleGot.bind(this,13)}>
-          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im3Style} onClick={this.handleGot.bind(this,18)}>
-          <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div style={containStyle}>
           <div style={buttonContainerStyle} className="buttonContainer">
