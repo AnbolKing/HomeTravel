@@ -14,6 +14,7 @@ import { Input, Button, Spin, message } from 'antd';
 import { UserOutlined, LockOutlined  } from '@ant-design/icons';
 import storageUtils from '../../utils/storge';
 import memoryUtils from '../../utils/memory';
+import getAppData from '../../utils/getAppData'
 import axios from 'axios';
 import store from '../../store/index';
 import './style.css';
@@ -51,6 +52,7 @@ class Login extends Component {
 
   handleSubmit() {
     if(this.state.user==='' || this.state.pass==='') {
+      message.destroy();
       message.warning({
         content:'填好账号和密码哦~',
         duration:1
@@ -65,6 +67,17 @@ class Login extends Component {
         password:this.state.pass
       }
       //axios请求---获取token
+      //使用incu-webview
+      // getAppData().then(res => {
+      //   let token = res.user.token;
+      //   console.log(token);
+      //   const action = {
+      //     type:'get_token',
+      //     token:'passport '+result.data.token,
+      //   }
+      //   store.dispatch(action);
+      // })
+
       const result = await axios.post('https://os.ncuos.com/api/user/token',JSON.stringify(obj),{
         headers: {
           'Content-Type':'application/json',
@@ -86,31 +99,9 @@ class Login extends Component {
         }
         memoryUtils.user = user;
         storageUtils.saveUser(user);
-        //进行图片预加载
-        // let imgs = [
-        //   "https://s1.ax1x.com/2020/09/04/wkHk4g.png",
-        //   "https://s1.ax1x.com/2020/09/04/wkH8C4.png",
-        //   "https://s1.ax1x.com/2020/09/04/wF6YtK.png",
-        //   "https://s1.ax1x.com/2020/09/04/wF6kmn.jpg"
-        // ];
-        // let count = 0;
-        // for(let img of imgs) {
-        //   let image = new Image()
-        //   image.src = img
-        //   image.onload = () => {
-        //     count++
-        //     // 计算图片加载的百分数，绑定到percent变量
-        //     let percentNum = Math.floor(this.count / 14 * 100)
-        //     this.setState({
-        //       percent: `${percentNum}%`
-        //     })
-        //   }
-        // }
-        // this.setState({
-        //   isLoading:false
-        // })
         this.props.history.replace('/');
       }
+      //获取信息==> 并没有用到
       axios.get('https://os.ncuos.com/api/user/profile/basic',{
         headers: {
           'Content-Type':'application/json',
@@ -128,6 +119,7 @@ class Login extends Component {
         this.setState({
           isLoading:false
         })
+        message.destroy();
         message.error({
           content:wrongMess,
           duration:1
@@ -154,7 +146,7 @@ class Login extends Component {
         </div>
         <div style={buttonContainer}>
           <Button type="primary" style={buttonStyle} onClick={this.handleSubmit}>登录</Button>
-          <Button type="primary" style={buttonStyle} onClick={this.handleRegister}>注册</Button>
+          {/* <Button type="primary" style={buttonStyle} onClick={this.handleRegister}>注册</Button> */}
         </div>
         </Spin>
       </div>

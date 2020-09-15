@@ -126,10 +126,10 @@ export const fullAfterStyle = {
 
 export const tipStyle = {
   position:'fixed',
-  color:'#915032',
-  fontSize:'0.12rem',
+  color:'#5C3317',
+  fontSize:'0.15rem',
   top:'0.2rem',
-  left:'50%',
-  transform:'translate(-50%)',
-  letterSpacing:'0.03rem'
+  width:'100%',
+  letterSpacing:'0.03rem',
+  textAlign:'center'
 }
