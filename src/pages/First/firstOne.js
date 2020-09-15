@@ -7,6 +7,10 @@ import {
 } from './style';
 import './style.css';
 import { Button,message } from 'antd';
+import axios from 'axios';
+import memoryUtils from '../../utils/memory';
+import storageUtils from '../../utils/storge';
+import store from '../../store/index';
 
 class FirstOne extends Component {
 
@@ -51,7 +55,6 @@ class FirstOne extends Component {
   }
 
   handleChange() {
-    console.log(123);
     this.setState((state) => ({
       firstOneStyle: {
         height:'100%',
@@ -118,7 +121,6 @@ class FirstOne extends Component {
   }
 
   handleEnter() {
-    console.log("opening");
     if(!this.state.start) {
       message.destroy();
       message.warning({
@@ -130,7 +132,48 @@ class FirstOne extends Component {
     this.props.history.push('/mapOne');
   }
 
+  handleJudgeLogin = () => {
+    const user = storageUtils.getUser();
+    console.log(user);
+    if(JSON.stringify(user) == "{}") {
+      this.props.history.replace('/login');
+      return ;
+    }
+    else {
+      //获取token
+      axios.post('https://os.ncuos.com/api/user/token',JSON.stringify(user),{
+        headers: {
+          'Content-Type':'application/json',
+          'Accept':'*/*',
+        }
+      }).then(result => {
+        if(result.data.status === 1) {
+          const action = {
+            type:'get_token',
+            token:'passport '+result.data.token,
+          }
+          store.dispatch(action);
+        }
+      })
+      //获取信息
+      axios.get('https://os.ncuos.com/api/user/profile/basic',{
+        headers: {
+          'Content-Type':'application/json',
+          'Accept':'*/*',
+          'Authorization':store.getState().toJS().mapReducer.token
+        }
+      }).then(res => {
+        const action = {
+          type:'get_name',
+          username:res.data.base_info.xm
+        };
+        store.dispatch(action);
+      })
+    }
+  }
+
   componentDidMount() {
+    this.handleJudgeLogin();
     var time = 0;
     var timeKeep = setInterval(() => {
       if(time == 1) {
@@ -172,11 +215,11 @@ class FirstOne extends Component {
         <div className="imgShow" style={imgShow}>
           <div className="imgOne" style={this.state.oneStyle}>
             {/* <img src={require('./pics/one.jpeg')} alt=""/> */}
-            <img src='https://s1.ax1x.com/2020/09/04/wF6YtK.png' alt=""/>
+            <img src="https://s1.ax1x.com/2020/09/04/wF6YtK.png" alt=""/>
           </div>
           <div className="imgTwo" style={this.state.twoStyle}>
             {/* <img src={require('./pics/two.jpeg')} alt=""/> */}
-            <img src='https://s1.ax1x.com/2020/09/04/wF6kmn.jpg' alt=""/>
+            <img src="https://s1.ax1x.com/2020/09/04/wF6kmn.jpg" alt=""/>
           </div>
         </div>
         <div className="buttonBox" style={buttonBox}>

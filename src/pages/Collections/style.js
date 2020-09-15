@@ -1,6 +1,6 @@
 export const backStyle = {
   // background: `url(${require("./pics/AllThingsBack.png")})`,
-  background:'url("https://s1.ax1x.com/2020/09/04/wFN3jK.png")',
+  background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/AllThingsBack.png")',
   backgroundSize:'cover',
   backgroundRepeat: 'no-repeat',
   height:'100%',

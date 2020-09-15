@@ -203,7 +203,8 @@ class mapFour extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        <img src={require('../pics/roomFour.png')} alt=""/>
+        {/* <img src="https://s1.ax1x.com/2020/09/15/wsoDiD.png" alt=""/> */}
+        <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomFour.png" alt=""/>
         <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,6)}>
           <img src={require('../../Collections/pics/0.png')} alt="" style={imgStyle}/>
         </div>

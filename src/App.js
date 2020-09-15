@@ -19,14 +19,14 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Route path="/first" exact component={FirstOne} />
+        <Route path="/login" exact component={Login} />
         <Route path="/all" exact component={AllThings} />
         <Route path="/collections" exact component={Collections} />
         <Route path="/mapone" exact component={mapOne} />
         <Route path="/maptwo" exact component={mapTwo} />
         <Route path="/mapthree" exact component={mapThree} />
         <Route path="/mapfour" exact component={mapFour} />
-        <Route path="/" exact component={Login} />
+        <Route path="/" exact component={FirstOne} />
         <Route path="/register" exact component={Register} />
       </BrowserRouter>
     </Provider>
