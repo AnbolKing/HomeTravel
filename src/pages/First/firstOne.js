@@ -132,7 +132,7 @@ class FirstOne extends Component {
     this.props.history.push('/mapOne');
   }
 
-  handleJudgeLogin = () => {
+  handleJudgeLogin = async () => {
     const user = storageUtils.getUser();
     console.log(user);
     if(JSON.stringify(user) == "{}") {
@@ -141,21 +141,21 @@ class FirstOne extends Component {
     }
     else {
       //获取token
-      axios.post('https://os.ncuos.com/api/user/token',JSON.stringify(user),{
+      const result = await axios.post('https://os.ncuos.com/api/user/token',JSON.stringify(user),{
         headers: {
           'Content-Type':'application/json',
           'Accept':'*/*',
         }
-      }).then(result => {
-        if(result.data.status === 1) {
-          const action = {
-            type:'get_token',
-            token:'passport '+result.data.token,
-          }
-          store.dispatch(action);
+      });
+      if(result.data.status === 1) {
+        const action = {
+          type:'get_token',
+          token:'passport '+result.data.token,
         }
-      })
+        store.dispatch(action);
+      }
       //获取信息
+      console.log(store.getState().toJS().mapReducer.token);
       axios.get('https://os.ncuos.com/api/user/profile/basic',{
         headers: {
           'Content-Type':'application/json',
@@ -163,6 +163,7 @@ class FirstOne extends Component {
           'Authorization':store.getState().toJS().mapReducer.token
         }
       }).then(res => {
+        console.log(res.data.base_info.xm);
         const action = {
           type:'get_name',
           username:res.data.base_info.xm

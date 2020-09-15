@@ -78,15 +78,8 @@ export const buttonContainerStyle = {
 }
 
 export const buttonStyle = {
-  // 原来的悬浮于图片上面的按钮
-  // marginTop:'0.3rem',
-  // width:'0.86rem',
-  // height:'0.32rem',
-  // boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
-  // borderRadius:'0.09rem',
-  // background:'#E3A78D'
   margin:'0 auto',
-  marginTop:'0.02rem',
+  paddingTop:'0.15rem'
 }
 
 export const textStyle = {

@@ -34,7 +34,7 @@ export const fuzhu = {
 }
 
 export const naviStyle = {
-  width:'81%',
+  width:'83%',
   margin:'0 auto',
   marginTop:'0.2rem',
   paddingBottom:'5%',
@@ -131,4 +131,9 @@ export const textItemStyle = {
   mozUserSelect:'none',  
   oUserSelect:'none',  
   msUserSelect:'none',
+}
+
+export const jiangpin = {
+  color:'#FFABB7',
+  fontWeight:'700'
 }

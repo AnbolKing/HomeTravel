@@ -15,7 +15,8 @@ import {
   itemStyle,
   textItemStyle,
   fuzhu,
-  itemUniqStyle
+  itemUniqStyle,
+  jiangpin
 } from './style';
 import store from '../../store/index';
 import axios from 'axios';
@@ -93,13 +94,16 @@ class AllThings extends Component {
               this.state.allIn==8?(
                 <div>
                   <div className="naviText" style={naviTextStyle}>
-                    恭喜你，成功集齐八个物品，奖励一份小家园用心准备的小礼物！具体领取方式会在活动结束后由家园工作室官方
-                    <span style={{fontWeight:'800'}}>QQ（2459289916）</span>
+                    恭喜
+                    <span> {store.getState().toJS().mapReducer.username}</span>
+                    ，成功集齐八个物品，奖励一份小家园用心准备的小礼物！
+                    <span style={jiangpin}>奖品有限，先到先得！</span>
+                    具体领取方式会在活动结束后由家园工作室官方<span style={jiangpin}>QQ:2459289916</span>
                     发布，请保存游戏截图，关注小家园发布的信息噢~
                   </div>
                   <div className="naviURL" style={naviTextStyle}>
                     最后，非常欢迎大家线下体验游戏（
-                    <span style={{fontWeight:'800'}}>地址：七栋零层家园工作室</span>
+                    <span style={jiangpin}>地址：七栋零层家园工作室</span>
                     ），我们会常备零食等候各位小精灵的到来，一场不一样的相遇，或许会创造你想要的可能性。
                   </div>
                 </div>
