@@ -17,7 +17,7 @@ import {
   fullBeforeStyle,
   fullAfterStyle,
   textStyle,
-  tipStyle
+  tipStyle,
 } from './style';
 import {
   RightCircleOutlined,
@@ -38,7 +38,6 @@ class mapOne extends Component {
       isVisableGet:false,
       number:0,
       get:false,
-      imgDom:''
     }
     // this.handleGet = this.handleGet.bind(this);
     this.handleLeft = this.handleLeft.bind(this);
@@ -176,13 +175,27 @@ class mapOne extends Component {
   handleLine() {
     this.props.history.push('/all')
   }
-  componentDidMount() {
-    let image = new Image()
-    image.src = store.getState().toJS().mapReducer.imgOne
-    //console.log(image);
-    this.setState({
-      imgDom:image
-    })
+
+  returnImg = (img) => {
+    console.log(img);
+    return (
+      img
+    )
+  }
+
+  loadImage = (url,callback) => {
+    var img = new Image(); //创建一个Image对象，实现图片的预下载     
+    img.src = url; 
+    if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
+      console.log(img.complete);   
+      callback(img);     
+      return; // 直接返回，不用再处理onload事件     
+    } 
+    img.onload = function () { //图片下载完毕时异步调用callback函数。  
+      console.log('开始');       
+      callback(img);     
+      console.log('结束'); 
+    };
   }
   
   render() {
@@ -211,7 +224,9 @@ class mapOne extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt=""/>
+        <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" as="image" />
+        {/* {this.loadImage("https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png",this.returnImg)} */}
+        {/* <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt=""/> */}
         <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,1)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>

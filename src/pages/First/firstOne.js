@@ -139,6 +139,17 @@ class FirstOne extends Component {
       });     
       return ;
     }
+    // let imgs = [
+    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/AllThingsBack.png',
+    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png',
+    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png',
+    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png',
+    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomFour.png',
+    // ];
+    // for(let img of imgs) {
+    //   let image = new Image()
+    //   image.src = store.getState().toJS().mapReducer.imgOne  
+    // }
     this.props.history.push('/mapOne');
   }
 

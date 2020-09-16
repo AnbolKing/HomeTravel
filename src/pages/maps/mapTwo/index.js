@@ -205,8 +205,8 @@ class mapTwo extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        {/* <img src="https://s1.ax1x.com/2020/09/15/wsotMR.png" alt=""/> */}
-        <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomTwo.png" alt=""/>
+        {/* <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomTwo.png" alt=""/> */}
+        <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png" as="image" />
         <div className="num2" style={im1style} onClick={this.handleGet.bind(this,5)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
