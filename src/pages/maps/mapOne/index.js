@@ -29,7 +29,6 @@ import { SmileTwoTone } from '@ant-design/icons';
 import '../config/style.css';
 import DetailOne from '../../DetailOne/index';
 import store from '../../../store/index';
-
 class mapOne extends Component {
 
   constructor(props) {
@@ -38,7 +37,7 @@ class mapOne extends Component {
       isVisable:false,
       isVisableGet:false,
       number:0,
-      get:false
+      get:false,
     }
     // this.handleGet = this.handleGet.bind(this);
     this.handleLeft = this.handleLeft.bind(this);
@@ -50,7 +49,7 @@ class mapOne extends Component {
   handleShutFull() {
     this.setState({
       isVisableGet:false,
-      get:false
+      get:false,
     })
     this.props.history.push('/all')
   }
@@ -62,7 +61,7 @@ class mapOne extends Component {
     if(store.getState().toJS().mapReducer.number === 8) {
       this.setState({
         get:true,
-        isVisableGet:true
+        isVisableGet:true,
       })
     }
     else {

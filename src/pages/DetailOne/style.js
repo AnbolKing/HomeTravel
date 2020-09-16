@@ -1,12 +1,10 @@
 export const tipStyle = {
   border:'1px solid white',
-  boxShadow: '5px 5px 10px 10px rgba(0, 0, 0, .05)',
+  boxShadow: '5px 5px 10px 10px rgba(255, 255, 255, 0.1)',
   margin:'0 auto',
   marginTop:'100px',
   width:'3.06rem',
-  // height:'2.99rem',
-  // backgroundColor:'yellow',
-  // background: `url(${require("./pics/detail.png")})`,
+  height:'3.5rem',
   backgroundColor:'white',
   backgroundSize:'100% 100%',
   backgroundRepeat: 'no-repeat',
@@ -32,7 +30,7 @@ export const imgStyle = {
 export const textStyle = {
   margin:'0 auto',
   paddingTop:'0.22rem',
-  paddingBottom:'0.22rem',
+  // paddingBottom:'0.22rem',
   // paddingRight:'0.2rem',
   letterSpacing:'0.01rem',
   lineHeight:'0.2rem',

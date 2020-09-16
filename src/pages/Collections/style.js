@@ -62,7 +62,7 @@ export const descStyle = {
   paddingTop:'0.22rem',
   paddingBottom:'0.22rem',
   paddingRight:'0.2rem',
-  fontSize:'0.04rem',
+  fontSize:'0.2rem',
   letterSpacing:'0.01rem',
   lineHeight:'0.15rem',
   color:'gray',

@@ -204,7 +204,7 @@ class mapThree extends Component {
           }
         </div>
         {/* <img src="https://s1.ax1x.com/2020/09/15/wsoUqx.png" alt=""/> */}
-        <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png" alt=""/>
+        <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomThree.png" alt=""/>
         <div className="num2" style={num2Style} onClick={this.handleGet.bind(this,4)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>

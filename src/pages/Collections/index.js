@@ -61,7 +61,8 @@ class Collections extends Component {
             borderRadius:'0.11rem',
             fontSize:'0.14rem'
           },
-          icon:<FrownTwoTone spin twoToneColor="#B22222"/>
+          icon:<FrownTwoTone spin twoToneColor="#B22222"/>,
+          top:100
         })
         return ;
       }
@@ -93,7 +94,8 @@ class Collections extends Component {
                   <Row>
                     <Col span={6} style={imgStyle}>
                       <div className="item-img" >
-                        <img src={require('./pics/'+parseInt(item.ObjID)+'.png')} alt="" style={imgInsideStyle}/>
+                      {/* <img src={'https://ncu-hometracking.oss-accelerate.aliyuncs.com/'+this.state.id+'.png'}  alt="" style={imgStyle}/> */}
+                      <img src={'https://ncu-hometracking.oss-accelerate.aliyuncs.com/'+parseInt(item.ObjID)+'.png'} alt="" style={imgInsideStyle}/>
                       </div>
                     </Col>
                     <Col span={18}>

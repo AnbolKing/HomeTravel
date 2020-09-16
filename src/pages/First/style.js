@@ -21,10 +21,10 @@ export const buttonStyle = {
   width:'1.22rem',
   height:'0.52rem',
   textAlign:'center',
-  color:'white',
-  background:'lightgray',
+  color:'#FFFFFF',
+  background:'#B99380',
   borderRadius:'0.1rem',
-  borderColor:'none',
+  borderColor:'#B99380',
   marginTop:'0.1rem',
   boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
   fontSize:'0.15rem'

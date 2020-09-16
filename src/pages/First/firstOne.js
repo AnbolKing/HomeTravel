@@ -103,7 +103,7 @@ class FirstOne extends Component {
             height:'100%',
             width:'100%',
             transition: 'all 1s',
-            filter: 'blur(5px)',
+            // filter: 'blur(5px)',
           },
         })
       },800)
@@ -122,11 +122,12 @@ class FirstOne extends Component {
 
   handleEnter() {
     if(!this.state.start) {
+      this.handleChange();
       message.destroy();
       message.warning({
         content:'请先阅读游戏规则哦~',
         duration:1
-      });
+      });     
       return ;
     }
     this.props.history.push('/mapOne');
@@ -196,7 +197,7 @@ class FirstOne extends Component {
           height:'100%',
           width:'100%',
           transition: 'all 1s',
-          filter: 'blur(5px)',
+          // filter: 'blur(5px)',
         },
       })
     },100)
@@ -213,10 +214,10 @@ class FirstOne extends Component {
         </div>
         <div className="imgShow" style={imgShow}>
           <div className="imgOne" style={this.state.oneStyle}>
-            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/one.jpeg" alt=""/>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/one.png" alt=""/>
           </div>
           <div className="imgTwo" style={this.state.twoStyle}>
-            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/two.jpeg" alt=""/>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/two.png" alt=""/>
           </div>
         </div>
         <div className="buttonBox" style={buttonBox}>

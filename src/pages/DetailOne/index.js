@@ -6,14 +6,16 @@ import {
   textStyle,
 } from './style';
 import axios from 'axios';
-import store from '../../store/index'
+import store from '../../store/index';
+import "animate.css";
 
 class DetailOne extends Component {
   constructor(props) {
     super(props);
     this.state = {
       id:this.props.id,
-      imgText:''
+      imgText:'',
+      fadeIn:"animate__animated animate__fadeInDown"
     }
   }
 
@@ -38,9 +40,9 @@ class DetailOne extends Component {
   
   render() {
     return (
-      <div className="tip" style={tipStyle}>
+      <div className="tip" style={tipStyle} className={this.state.fadeIn}>
         <div className="circle" style={circleStyle}>
-          <img src={require('../Collections/pics/'+this.state.id+'.png')} alt="" style={imgStyle}/>
+          <img src={'https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/'+this.state.id+'.png'}  alt="" style={imgStyle}/>
         </div>
         <div className="text" style={textStyle}>
           {this.state.imgText}
