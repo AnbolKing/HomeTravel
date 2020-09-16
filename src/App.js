@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route,BrowserRouter} from 'react-router-dom';
+import {Route,HashRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import AllThings from './pages/AllThings/index';
 import Collections from './pages/Collections/index';
@@ -18,7 +18,7 @@ import Register from './pages/Register/index';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Route path="/login" exact component={Login} />
         <Route path="/all" exact component={AllThings} />
         <Route path="/collections" exact component={Collections} />
@@ -28,7 +28,7 @@ function App() {
         <Route path="/mapfour" exact component={mapFour} />
         <Route path="/" exact component={FirstOne} />
         <Route path="/register" exact component={Register} />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }

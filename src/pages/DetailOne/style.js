@@ -4,7 +4,7 @@ export const tipStyle = {
   margin:'0 auto',
   marginTop:'100px',
   width:'3.06rem',
-  height:'3.5rem',
+  height:'3.3rem',
   backgroundColor:'white',
   backgroundSize:'100% 100%',
   backgroundRepeat: 'no-repeat',
@@ -37,5 +37,5 @@ export const textStyle = {
   color:'gray',
   textIndent:'2em',
   margin:'0.45rem',
-  fontSize:'0.1rem'
+  fontSize:'0.13rem'
 }
