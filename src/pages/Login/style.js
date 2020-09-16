@@ -3,7 +3,7 @@ export const containStyle = {
 }
 
 export const backStyle = {
-  background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/AllThingsBack.png")',
+  background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/login.png")',
   backgroundSize:'cover',
   backgroundRepeat: 'no-repeat',
   height:'100%',
@@ -23,7 +23,9 @@ export const boxContain = {
 export const inputStyle = {
   marginTop:'0.35rem',
   width:'80%',
-  borderRadius:'0.2rem'
+  height:'0.5rem',
+  borderRadius:'0.5rem',
+  borderColor:'#FFFFFF'
 }
 
 export const buttonContainer = {
@@ -34,14 +36,16 @@ export const buttonContainer = {
 }
 
 export const buttonStyle = {
-  marginTop:'0.3rem',
-  width:'100px',
-  // width: '33.3%',
-  // minWidth: '33.3%',
-  // maxWidth: '33.3%',
-  height:'0.4rem',
-  borderRadius:'0.2rem',
-  fontSize:'0.15rem'
+  width:'1.22rem',
+  height:'0.52rem',
+  textAlign:'center',
+  color:'#FFFFFF',
+  background:'#896457',
+  borderRadius:'0.1rem',
+  borderColor:'#896457',
+  marginTop:'0.85rem',
+  boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+  fontSize:'0.18rem'
 }
 
 export const SpinContain = {

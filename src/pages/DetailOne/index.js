@@ -8,6 +8,7 @@ import {
 import axios from 'axios';
 import store from '../../store/index';
 import "animate.css";
+import './style.css';
 
 class DetailOne extends Component {
   constructor(props) {

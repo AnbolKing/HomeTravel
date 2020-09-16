@@ -138,7 +138,7 @@ class Login extends Component {
         <Spin spinning={this.state.isLoading} style={SpinContain} tip={this.state.percent}>
         <div style={backStyle}></div>
         <div className="title-img" style={imgContainStyle}>
-          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/title.png" alt="" style={imgStyle}/>
+          {/* <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/title.png" alt="" style={imgStyle}/> */}
         </div>
         <div style={boxContain}>
           <Input id="user" size="large" placeholder="请输入学号" prefix={<UserOutlined />} style={inputStyle} onChange={this.handleUser} value={this.state.user}/>

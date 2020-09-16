@@ -38,6 +38,7 @@ class mapOne extends Component {
       isVisableGet:false,
       number:0,
       get:false,
+      imgDom:''
     }
     // this.handleGet = this.handleGet.bind(this);
     this.handleLeft = this.handleLeft.bind(this);
@@ -175,6 +176,14 @@ class mapOne extends Component {
   handleLine() {
     this.props.history.push('/all')
   }
+  componentDidMount() {
+    let image = new Image()
+    image.src = store.getState().toJS().mapReducer.imgOne
+    //console.log(image);
+    this.setState({
+      imgDom:image
+    })
+  }
   
   render() {
     return (
@@ -202,7 +211,6 @@ class mapOne extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        {/* <img src="https://s1.ax1x.com/2020/09/05/wEr6RU.png" alt=""/> */}
         <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt=""/>
         <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,1)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>

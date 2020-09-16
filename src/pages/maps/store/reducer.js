@@ -21,7 +21,12 @@ const defaultState = {
   ],
   number:0,
   token:'',
-  username:''
+  username:'',
+  imgOne:'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png',
+  imgTwo:'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png',
+  imgThree:'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png',
+  imgFour:'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomFour.png',
+  back:'https://ncu-hometracking.oss-accelerate.aliyuncs.com/AllThingsBack.png',
 }
 
 export default (state = defaultState,action) => {
