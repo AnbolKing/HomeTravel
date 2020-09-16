@@ -29,3 +29,8 @@ export const buttonStyle = {
   boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
   fontSize:'0.15rem'
 }
+
+export const imgStyle = {
+  width:'100%',
+  // height:'100%',
+}

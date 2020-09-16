@@ -3,7 +3,8 @@ import {
   mainStyle,
   imgShow,
   buttonBox,
-  buttonStyle
+  buttonStyle,
+  imgStyle
 } from './style';
 import './style.css';
 import { Button,message } from 'antd';
@@ -36,17 +37,21 @@ class FirstOne extends Component {
         left: '50%',
         top: '50%',
         marginLeft:'-150px',
-        marginTop:'-143.5px',
-        opacity:0
+        marginTop:'-163.5px',
+        opacity:0,
+        width:'3.21rem',
+        height:'100%'
       },
       twoStyle: {
         position: 'fixed',
         left: '50%',
         top: '50%',
         marginLeft:'-150px',
-        marginTop:'-143.5px',
+        marginTop:'-163.5px',
         opacity:0,
         zIndex:-9,
+        width:'3.21rem',
+        height:'100%'
       },
       start:false
     }
@@ -79,9 +84,11 @@ class FirstOne extends Component {
             left: '50%',
             top: '50%',
             marginLeft:'-150px',
-            marginTop:'-143.5px',
+            marginTop:'-163.5px',
             opacity:0,
             transition: 'all 0.5s',
+            width:'3.21rem',
+            height:'100%'
           },
         })
       },500);
@@ -92,9 +99,11 @@ class FirstOne extends Component {
             left: '50%',
             top: '50%',
             marginLeft:'-150px',
-            marginTop:'-143.5px',
+            marginTop:'-163.5px',
             opacity:1,
             transition: 'all 0.5s',
+            width:'3.21rem',
+            height:'100%'
           },
           firstTwoStyle: {
             position:'absolute',
@@ -189,9 +198,11 @@ class FirstOne extends Component {
           left: '50%',
           top: '50%',
           marginLeft:'-150px',
-          marginTop:'-143.5px',
+          marginTop:'-163.5px',
           opacity:1,
           transition: 'all 0.3s',
+          width:'3.21rem',
+          height:'100%'
         },
         firstOneStyle: {
           height:'100%',
@@ -214,10 +225,10 @@ class FirstOne extends Component {
         </div>
         <div className="imgShow" style={imgShow}>
           <div className="imgOne" style={this.state.oneStyle}>
-            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/one.png" alt=""/>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/one.png" alt="" style={imgStyle}/>
           </div>
           <div className="imgTwo" style={this.state.twoStyle}>
-            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/two.png" alt=""/>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/two.png" alt="" style={imgStyle}/>
           </div>
         </div>
         <div className="buttonBox" style={buttonBox}>
