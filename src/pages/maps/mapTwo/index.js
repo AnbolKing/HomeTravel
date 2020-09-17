@@ -205,9 +205,17 @@ class mapTwo extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        {/* <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomTwo.png" alt=""/> */}
-        <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png" as="image" />
-        <div className="num2" style={im1style} onClick={this.handleGet.bind(this,5)}>
+        <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomTwo.png" alt="" useMap="#map"/>
+        <map name="map">
+          <area shape="circle" coords="197,440,30" alt="玩偶" href="javascript:;" onClick={this.handleGet.bind(this,5)} />
+          <area shape="circle" coords="388,408,20" alt="水果零食" href="javascript:;" onClick={this.handleGet.bind(this,7)} />
+          <area shape="circle" coords="245,111,70" alt="书" href="javascript:;" onClick={this.handleGot.bind(this,12)} />
+          <area shape="rect" coords="171,502,273,535" alt="沙发" href="javascript:;" onClick={this.handleGot.bind(this,11)} />
+          <area shape="circle" coords="134,355,30" alt="沙发" href="javascript:;" onClick={this.handleGot.bind(this,11)} />
+          <area shape="circle" coords="684,305,35" alt="盆栽" href="javascript:;" onClick={this.handleGot.bind(this,20)} />
+        </map>
+        {/* <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png" as="image" /> */}
+        {/* <div className="num2" style={im1style} onClick={this.handleGet.bind(this,5)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im2style} onClick={this.handleGet.bind(this,7)}>
@@ -221,7 +229,7 @@ class mapTwo extends Component {
         </div>
         <div className="num2" style={im5style} onClick={this.handleGot.bind(this,20)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
-        </div>
+        </div> */}
         <div style={containStyle}>
           <div style={buttonContainerStyle} className="buttonContainer">
             <div className="collection" style={buttonStyle} onClick={this.handleColl.bind(this)}>

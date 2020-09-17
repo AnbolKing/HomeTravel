@@ -203,9 +203,15 @@ class mapThree extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        {/* <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomThree.png" alt=""/> */}
-        <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png" as="image" />
-        <div className="num2" style={num2Style} onClick={this.handleGet.bind(this,4)}>
+        <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomThree.png" alt="" useMap="#map"/>
+        <map name="map">
+          <area shape="circle" coords="566,510,40" alt="蓝色盒子" href="javascript:;" onClick={this.handleGet.bind(this,4)} />
+          <area shape="circle" coords="492,306,30" alt="椅子" href="javascript:;" onClick={this.handleGot.bind(this,16)} />
+          <area shape="circle" coords="599,42,30" alt="空调" href="javascript:;" onClick={this.handleGot.bind(this,13)} />
+          <area shape="circle" coords="873,184,80" alt="窗帘" href="javascript:;" onClick={this.handleGot.bind(this,18)} />
+        </map>
+        {/* <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png" as="image" /> */}
+        {/* <div className="num2" style={num2Style} onClick={this.handleGet.bind(this,4)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={imStyle} onClick={this.handleGot.bind(this,16)}>
@@ -216,7 +222,7 @@ class mapThree extends Component {
         </div>
         <div className="num2" style={im3Style} onClick={this.handleGot.bind(this,18)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
-        </div>
+        </div> */}
         <div style={containStyle}>
           <div style={buttonContainerStyle} className="buttonContainer">
             <div className="collection" style={buttonStyle} onClick={this.handleColl.bind(this)}>

@@ -176,27 +176,27 @@ class mapOne extends Component {
     this.props.history.push('/all')
   }
 
-  returnImg = (img) => {
-    console.log(img);
-    return (
-      img
-    )
-  }
+  // returnImg = (img) => {
+  //   console.log(img);
+  //   return (
+  //     img
+  //   )
+  // }
 
-  loadImage = (url,callback) => {
-    var img = new Image(); //创建一个Image对象，实现图片的预下载     
-    img.src = url; 
-    if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
-      console.log(img.complete);   
-      callback(img);     
-      return; // 直接返回，不用再处理onload事件     
-    } 
-    img.onload = function () { //图片下载完毕时异步调用callback函数。  
-      console.log('开始');       
-      callback(img);     
-      console.log('结束'); 
-    };
-  }
+  // loadImage = (url,callback) => {
+  //   var img = new Image(); //创建一个Image对象，实现图片的预下载     
+  //   img.src = url; 
+  //   if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
+  //     console.log(img.complete);   
+  //     callback(img);     
+  //     return; // 直接返回，不用再处理onload事件     
+  //   } 
+  //   img.onload = function () { //图片下载完毕时异步调用callback函数。  
+  //     console.log('开始');       
+  //     callback(img);     
+  //     console.log('结束'); 
+  //   };
+  // }
   
   render() {
     return (
@@ -224,10 +224,16 @@ class mapOne extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" as="image" />
         {/* {this.loadImage("https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png",this.returnImg)} */}
-        {/* <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt=""/> */}
-        <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,1)}>
+        <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt="" useMap="#map"/>
+        <map name="map">
+          <area shape="circle" coords="275,463,30" alt="红扇子" href="javascript:;" onClick={this.handleGet.bind(this,1)} />
+          <area shape="circle" coords="572,159,30" alt="咖啡墙" href="javascript:;" onClick={this.handleGet.bind(this,2)} />
+          <area shape="rect" coords="855,213,965,558" alt="饮水机" href="javascript:;" onClick={this.handleGot.bind(this,17)} />
+          <area shape="circle" coords="186,245,30" alt="电脑" href="javascript:;" onClick={this.handleGot.bind(this,10)} />
+          <area shape="rect" coords="495,127,516,264" alt="后门" href="javascript:;" onClick={this.handleGot.bind(this,19)} />
+        </map>
+        {/* <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,1)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
         </div>
         <div className="num2" style={im2Style} onClick={this.handleGet.bind(this,2)}>
@@ -241,7 +247,7 @@ class mapOne extends Component {
         </div>
         <div className="num2" style={im5Style} onClick={this.handleGot.bind(this,19)}>
           <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/0.png" alt="" style={imgStyle}/>
-        </div>
+        </div> */}
         <div style={containStyle}>
           <div style={buttonContainerStyle} className="buttonContainer">
             <div className="collection" style={buttonStyle} onClick={this.handleColl.bind(this)}>
