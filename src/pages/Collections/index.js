@@ -41,7 +41,6 @@ class Collections extends Component {
       }
     }).then(res => {
       const result = res.data;
-      console.log('bool:',this.state.data===null)
       if(result.status !== 1) {
         message.error({
           content:'请求错误，请稍后重试',
@@ -71,7 +70,6 @@ class Collections extends Component {
       this.setState({
         data:list,
       })
-      console.log(this.state.data);
     })
   }
 

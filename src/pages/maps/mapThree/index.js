@@ -79,8 +79,6 @@ class mapThree extends Component {
   }
 
   async handleGet(mes) {
-    console.log(mes);
-    console.log((store.getState().toJS().mapReducer.judge)[mes])
     if(!((store.getState().toJS().mapReducer.judge)[mes])) {
       this.setState({
         isVisable:true,
@@ -95,9 +93,6 @@ class mapThree extends Component {
       let username = store.getState().toJS().mapReducer.username
       let token = store.getState().toJS().mapReducer.token
       let url = 'http://112.124.26.56:8999/api/add?id=' + mes + '&name=' + username
-      // console.log('url',url);
-      // console.log('username',username);
-      // console.log('url',url);
       let res = await axios.get(url,{
         headers:{
           'Content-Type':'application/json',
@@ -105,7 +100,6 @@ class mapThree extends Component {
           'Authorization':token
         }
       });
-      console.log(res);
       return ;
     }
     else {
@@ -122,9 +116,7 @@ class mapThree extends Component {
   }
 
   async handleGot(mes) {
-    console.log(mes);
     let disurl = 'http://112.124.26.56:8999/obj/getone?id=' + mes;
-    console.log(disurl);
     let token = store.getState().toJS().mapReducer.token
     const result = await axios.get(disurl,{
       headers:{

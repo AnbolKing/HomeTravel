@@ -73,8 +73,6 @@ class AllThings extends Component {
       })
   
     });
-    console.log(this.state.list);
-    console.log(this.state.allIn);
   }
 
   handleBack() {

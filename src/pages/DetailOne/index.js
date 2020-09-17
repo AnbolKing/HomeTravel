@@ -32,7 +32,6 @@ class DetailOne extends Component {
     }).then(res => {
       const result = res.data;
       const data = result.data;
-      console.log(data);
       this.setState({
         imgText:data.Text
       })

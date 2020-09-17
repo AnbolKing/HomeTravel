@@ -180,7 +180,6 @@ class FirstOne extends Component {
 
   handleJudgeLogin = async () => {
     const user = storageUtils.getUser();
-    console.log(user);
     if(JSON.stringify(user) == "{}") {
       this.props.history.replace('/login');
       return ;
@@ -201,7 +200,6 @@ class FirstOne extends Component {
         store.dispatch(action);
       }
       //获取信息
-      console.log(store.getState().toJS().mapReducer.token);
       axios.get('https://os.ncuos.com/api/user/profile/basic',{
         headers: {
           'Content-Type':'application/json',
@@ -209,7 +207,6 @@ class FirstOne extends Component {
           'Authorization':store.getState().toJS().mapReducer.token
         }
       }).then(res => {
-        console.log(res.data.base_info.xm);
         const action = {
           type:'get_name',
           username:res.data.base_info.xm

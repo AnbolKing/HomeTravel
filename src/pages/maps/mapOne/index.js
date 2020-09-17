@@ -93,9 +93,6 @@ class mapOne extends Component {
       let username = store.getState().toJS().mapReducer.username
       let token = store.getState().toJS().mapReducer.token
       let url = 'http://112.124.26.56:8999/api/add?id=' + mes + '&name=' + username
-      // console.log('url',url);
-      // console.log('username',username);
-      // console.log('url',url);
       let res = await axios.get(url,{
         headers:{
           'Content-Type':'application/json',
@@ -103,7 +100,6 @@ class mapOne extends Component {
           'Authorization':token
         }
       });
-      console.log(res);
       return ;
     }
     else {
@@ -121,9 +117,7 @@ class mapOne extends Component {
 
   async handleGot(mes) {
     //axios请求 获得干扰物信息
-    console.log(mes);
     let disurl = 'http://112.124.26.56:8999/obj/getone?id=' + mes;
-    console.log(disurl);
     let token = store.getState().toJS().mapReducer.token
     const result = await axios.get(disurl,{
       headers:{
@@ -175,28 +169,6 @@ class mapOne extends Component {
   handleLine() {
     this.props.history.push('/all')
   }
-
-  // returnImg = (img) => {
-  //   console.log(img);
-  //   return (
-  //     img
-  //   )
-  // }
-
-  // loadImage = (url,callback) => {
-  //   var img = new Image(); //创建一个Image对象，实现图片的预下载     
-  //   img.src = url; 
-  //   if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
-  //     console.log(img.complete);   
-  //     callback(img);     
-  //     return; // 直接返回，不用再处理onload事件     
-  //   } 
-  //   img.onload = function () { //图片下载完毕时异步调用callback函数。  
-  //     console.log('开始');       
-  //     callback(img);     
-  //     console.log('结束'); 
-  //   };
-  // }
   
   render() {
     return (
@@ -226,6 +198,7 @@ class mapOne extends Component {
         </div>
         {/* {this.loadImage("https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png",this.returnImg)} */}
         <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt="" useMap="#map"/>
+        {/* 地图属性使用 */}
         <map name="map">
           <area shape="circle" coords="275,463,30" alt="红扇子" href="javascript:;" onClick={this.handleGet.bind(this,1)} />
           <area shape="circle" coords="572,159,30" alt="咖啡墙" href="javascript:;" onClick={this.handleGet.bind(this,2)} />

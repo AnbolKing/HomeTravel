@@ -53,7 +53,7 @@ export const rightStyle = {
   opacity:'0.4',
   position:'fixed',
   top:'2.68rem',
-  left:'3.25rem'
+  left:'3.25rem',
 }
 
 export const leftStyle = {
@@ -61,7 +61,7 @@ export const leftStyle = {
   opacity:'0.4',
   position:'fixed',
   top:'2.68rem',
-  left:'0.1rem'
+  left:'0.1rem',
 }
 
 export const containStyle = {
