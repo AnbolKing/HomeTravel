@@ -19,26 +19,43 @@ class FirstOne extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstOneStyle: {
+      mainStyle: {
+        background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+        backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
+        zIndex:'-10',
+        position:'absolute'
+      },
+      firstOneStyle: {
+        background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+        backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
+        height:'100%',
+        width:'100%',
+        zIndex:'-10',
+        position:'absolute',
         opacity:1
       },
       firstTwoStyle: {
         position:'absolute',
-        // display:'none',
         opacity:0,
+        background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+        backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
+        zIndex:'-10',
+        position:'absolute',
         top:'0',
-        zIndex:-9,
       },
       oneStyle: {
         position: 'fixed',
         left: '50%',
         top: '50%',
         marginLeft:'-1.605rem',
-        marginTop:'-163.5px',
+        marginTop:'-1.635rem',
         opacity:0,
         width:'3.21rem',
         height:'100%'
@@ -48,7 +65,7 @@ class FirstOne extends Component {
         left: '50%',
         top: '50%',
         marginLeft:'-1.605rem',
-        marginTop:'-163.5px',
+        marginTop:'-1.635rem',
         opacity:0,
         zIndex:-9,
         width:'3.21rem',
@@ -66,9 +83,14 @@ class FirstOne extends Component {
   handleChange() {
     this.setState((state) => ({
       firstOneStyle: {
+        transition: 'all 1s',
+        background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+        backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
-        transition: 'all 1s',
+        zIndex:'-10',
+        position:'absolute',
         opacity: 0,
       },
       start:true,
@@ -79,11 +101,14 @@ class FirstOne extends Component {
       setTimeout(() => {
         this.setState({
           firstTwoStyle: {
-            position:'absolute',
-            top:0,
             opacity: 1,
+            background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+            backgroundSize:'cover',
+            backgroundRepeat: 'no-repeat',
             height:'100%',
             width:'100%',
+            zIndex:'-10',
+            position:'absolute',
             transition: 'all 1s',
           },
           oneStyle: {
@@ -91,7 +116,7 @@ class FirstOne extends Component {
             left: '50%',
             top: '50%',
             marginLeft:'-1.605rem',
-            marginTop:'-163.5px',
+            marginTop:'-1.635rem',
             opacity:0,
             transition: 'all 0.5s',
             width:'3.21rem',
@@ -106,7 +131,7 @@ class FirstOne extends Component {
             left: '50%',
             top: '50%',
             marginLeft:'-1.605rem',
-            marginTop:'-163.5px',
+            marginTop:'-1.635rem',
             opacity:1,
             transition: 'all 0.5s',
             width:'3.21rem',
@@ -114,12 +139,15 @@ class FirstOne extends Component {
           },
           firstTwoStyle: {
             position:'absolute',
-            top:0,
             opacity: 1,
+            background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+            backgroundSize:'cover',
+            backgroundRepeat: 'no-repeat',
             height:'100%',
             width:'100%',
+            zIndex:'-10',
+            position:'absolute',
             transition: 'all 1s',
-            // filter: 'blur(5px)',
           },
         })
       },800)
@@ -147,17 +175,6 @@ class FirstOne extends Component {
 
       return ;
     }
-    // let imgs = [
-    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/AllThingsBack.png',
-    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png',
-    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png',
-    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomThree.png',
-    //   'https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomFour.png',
-    // ];
-    // for(let img of imgs) {
-    //   let image = new Image()
-    //   image.src = store.getState().toJS().mapReducer.imgOne  
-    // }
     this.props.history.push('/mapOne');
   }
 
@@ -217,17 +234,23 @@ class FirstOne extends Component {
           left: '50%',
           top: '50%',
           marginLeft:'-1.605rem',
-          marginTop:'-163.5px',
+          marginTop:'-1.635rem',
           opacity:1,
           transition: 'all 0.3s',
           width:'3.21rem',
           height:'100%'
         },
         firstOneStyle: {
+          background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+          backgroundSize:'cover',
+          backgroundRepeat: 'no-repeat',
           height:'100%',
           width:'100%',
+          zIndex:'-10',
+          position:'absolute',
           transition: 'all 1s',
-          // filter: 'blur(5px)',
+          width:'100%',
+          height:'100%'
         },
       })
     },100)
@@ -235,12 +258,16 @@ class FirstOne extends Component {
   
   render() {
     return (
-      <div style={mainStyle}>
-        <div style={this.state.firstOneStyle}>
-          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg" alt=""/>
-        </div>
-        <div style={this.state.firstTwoStyle}>
-          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/first2.jpeg" alt=""/>
+      <div>
+        <div style={this.state.firstOneStyle}></div>
+        <div style={this.state.firstTwoStyle}></div>
+        <div>
+          {/* <div style={this.state.firstOneStyle}>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg" alt="" style={{width:'100%',height:'100%'}}/>
+          </div>
+          <div style={this.state.firstTwoStyle}>
+            <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/first2.jpeg" alt=""/>
+          </div> */}
         </div>
         <div className="imgShow" style={imgShow}>
           <div className="imgOne" style={this.state.oneStyle}>

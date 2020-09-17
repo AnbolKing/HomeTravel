@@ -1,20 +1,22 @@
-export const mainStyle = {
-  position:'relative'
-}
+// export const mainStyle = {
+//   background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
+//   backgroundSize:'cover',
+//   backgroundRepeat: 'no-repeat',
+//   height:'100%',
+//   width:'100%',
+//   zIndex:'-10',
+//   position:'absolute'
+// }
 
 export const imgShow = {
-  // position: 'fixed',
-  // left: '50%',
-  // top: '50%',
-  // marginLeft:'-150px',
-  // marginTop:'-143.5px',
+  position: 'absolute',
 }
 
 export const buttonBox = {
   position:'absolute',
   left:'50%',
   transform:'translateX(-50%)',
-  bottom:'10%'
+  bottom:'5%'
 }
 
 export const buttonStyle = {
