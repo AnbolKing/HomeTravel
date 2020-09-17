@@ -31,7 +31,6 @@ class Login extends Component {
     this.handleUser = this.handleUser.bind(this);
     this.handleChangePsss = this.handleChangePsss.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleRegister = this.handleRegister.bind(this);
   }
 
   handleChangePsss(event) {
@@ -44,10 +43,6 @@ class Login extends Component {
     this.setState({
       user:event.target.value
     })
-  }
-
-  handleRegister() {
-    this.props.history.push('/register');
   }
 
   handleSubmit() {
@@ -146,7 +141,6 @@ class Login extends Component {
         </div>
         <div style={buttonContainer}>
           <Button type="primary" style={buttonStyle} onClick={this.handleSubmit}>登录</Button>
-          {/* <Button type="primary" style={buttonStyle} onClick={this.handleRegister}>注册</Button> */}
         </div>
         </Spin>
       </div>
