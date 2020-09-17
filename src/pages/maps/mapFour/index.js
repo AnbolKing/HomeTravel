@@ -208,7 +208,7 @@ class mapFour extends Component {
           <area shape="rect" coords="153,152,414,342" alt="显示屏" href="javascript:;" onClick={this.handleGet.bind(this,6)} />
           <area shape="circle" coords="689,248,30" alt="太阳花" href="javascript:;" onClick={this.handleGet.bind(this,3)} />
           <area shape="circle" coords="851,518,50" alt="遥控器" href="javascript:;" onClick={this.handleGet.bind(this,8)} />
-          <area shape="rect" coords="443,382,572,426" alt="吊牌" href="javascript:;" onClick={this.handleGot.bind(this,18)} />
+          <area shape="rect" coords="443,382,572,426" alt="吊牌" href="javascript:;" onClick={this.handleGot.bind(this,15)} />
         </map>
         {/* <img rel="preload" src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomFour.png" as="image" /> */}
         {/* <div className="num2" style={im1Style} onClick={this.handleGet.bind(this,6)}>

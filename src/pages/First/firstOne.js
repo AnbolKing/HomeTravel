@@ -12,6 +12,7 @@ import axios from 'axios';
 import memoryUtils from '../../utils/memory';
 import storageUtils from '../../utils/storge';
 import store from '../../store/index';
+import 'animate.css';
 
 class FirstOne extends Component {
 
@@ -53,7 +54,10 @@ class FirstOne extends Component {
         width:'3.21rem',
         height:'100%'
       },
-      start:false
+      start:false,
+      rule:'',
+      explore:'',
+      text:'开始游戏'
     }
     this.handleEnter = this.handleEnter.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -67,7 +71,10 @@ class FirstOne extends Component {
         transition: 'all 1s',
         opacity: 0,
       },
-      start:true
+      start:true,
+      //rule:'animate__animated animate__swing',
+      explore:'animate__animated animate__flip',
+      text:'开启探险'
     }),() => {
       setTimeout(() => {
         this.setState({
@@ -136,7 +143,8 @@ class FirstOne extends Component {
       message.warning({
         content:'请先阅读游戏规则哦~',
         duration:1
-      });     
+      });    
+
       return ;
     }
     // let imgs = [
@@ -244,10 +252,14 @@ class FirstOne extends Component {
         </div>
         <div className="buttonBox" style={buttonBox}>
           <div className="button" onClick={this.handleEnter}>
-            <Button type="primary" style={buttonStyle}>开始游戏</Button>
+            <Button type="primary" style={buttonStyle}>
+              <span className={this.state.explore}>{this.state.text}</span>
+            </Button>
           </div>
           <div className="button" onClick={this.handleChange}>
-            <Button type="primary" style={buttonStyle}>游戏规则</Button>
+            <Button type="primary" style={buttonStyle}>
+              <span className={this.state.rule}>游戏规则</span>
+            </Button>
           </div>
         </div>
       </div>

@@ -206,7 +206,7 @@ class mapThree extends Component {
         <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomThree.png" alt="" useMap="#map"/>
         <map name="map">
           <area shape="circle" coords="566,510,40" alt="蓝色盒子" href="javascript:;" onClick={this.handleGet.bind(this,4)} />
-          <area shape="circle" coords="492,306,30" alt="椅子" href="javascript:;" onClick={this.handleGot.bind(this,16)} />
+          <area shape="circle" coords="570,296,30" alt="椅子" href="javascript:;" onClick={this.handleGot.bind(this,16)} />
           <area shape="circle" coords="599,42,30" alt="空调" href="javascript:;" onClick={this.handleGot.bind(this,13)} />
           <area shape="circle" coords="873,184,80" alt="窗帘" href="javascript:;" onClick={this.handleGot.bind(this,18)} />
         </map>
