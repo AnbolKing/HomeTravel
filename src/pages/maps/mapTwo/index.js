@@ -205,7 +205,7 @@ class mapTwo extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        <img src="https://ncu-hometracking.oss-cn-hangzhou.aliyuncs.com/roomTwo.png" alt="" useMap="#map"/>
+        <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomTwo.png" alt="" useMap="#map"/>
         <map name="map">
           <area shape="circle" coords="197,440,30" alt="玩偶" href="javascript:;" onClick={this.handleGet.bind(this,5)} />
           <area shape="circle" coords="388,408,20" alt="水果零食" href="javascript:;" onClick={this.handleGet.bind(this,7)} />
