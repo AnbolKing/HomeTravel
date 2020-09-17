@@ -196,8 +196,9 @@ class mapOne extends Component {
             this.state.get?(this.handleFull()):null
           }
         </div>
-        {/* {this.loadImage("https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png",this.returnImg)} */}
-        <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt="" useMap="#map"/>
+        <div>
+          <img src="https://ncu-hometracking.oss-accelerate.aliyuncs.com/roomOne.png" alt="" useMap="#map"/>
+        </div>
         {/* 地图属性使用 */}
         <map name="map">
           <area shape="circle" coords="275,463,30" alt="红扇子" href="javascript:;" onClick={this.handleGet.bind(this,1)} />

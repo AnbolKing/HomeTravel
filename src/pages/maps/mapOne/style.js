@@ -44,7 +44,7 @@ export const imgStyle = {
 }
 
 export const mapsStyle = {
-  position:'relative',
+  //position:'relative',
   // marginTop:'0.2rem'
 }
 
@@ -67,8 +67,9 @@ export const leftStyle = {
 export const containStyle = {
   width:'100%',
   position:'fixed',
-  top:'87%',
-  left:'3%'
+  // top:'87%',
+  left:'50%',
+  transform:'translateX(-50%)',
 }
 
 export const buttonContainerStyle = {

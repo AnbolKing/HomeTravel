@@ -21,7 +21,7 @@ class FirstOne extends Component {
     this.state = {
       mainStyle: {
         background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
@@ -30,7 +30,7 @@ class FirstOne extends Component {
       },
       firstOneStyle: {
         background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
@@ -42,7 +42,7 @@ class FirstOne extends Component {
         position:'absolute',
         opacity:0,
         background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
@@ -85,7 +85,7 @@ class FirstOne extends Component {
       firstOneStyle: {
         transition: 'all 1s',
         background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-        backgroundSize:'cover',
+        backgroundSize:'100% 100%',
         backgroundRepeat: 'no-repeat',
         height:'100%',
         width:'100%',
@@ -103,7 +103,7 @@ class FirstOne extends Component {
           firstTwoStyle: {
             opacity: 1,
             background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-            backgroundSize:'cover',
+            backgroundSize:'100% 100%',
             backgroundRepeat: 'no-repeat',
             height:'100%',
             width:'100%',
@@ -141,7 +141,7 @@ class FirstOne extends Component {
             position:'absolute',
             opacity: 1,
             background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-            backgroundSize:'cover',
+            backgroundSize:'100% 100%',
             backgroundRepeat: 'no-repeat',
             height:'100%',
             width:'100%',
@@ -239,7 +239,7 @@ class FirstOne extends Component {
         },
         firstOneStyle: {
           background:'url("https://ncu-hometracking.oss-accelerate.aliyuncs.com/first1.jpeg")',
-          backgroundSize:'cover',
+          backgroundSize:'100% 100%',
           backgroundRepeat: 'no-repeat',
           height:'100%',
           width:'100%',

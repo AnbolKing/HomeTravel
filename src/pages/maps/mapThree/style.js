@@ -35,7 +35,7 @@ export const leftStyle = {
 export const containStyle = {
   width:'100%',
   position:'fixed',
-  top:'87%',
+  //top:'87%',
   left:'3%'
 }
 
