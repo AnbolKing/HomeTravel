@@ -88,7 +88,7 @@ class Login extends Component {
         storageUtils.saveUser(user);
         this.props.history.replace('/');
       }
-      //获取信息==> 并没有用到
+      //获取信息
       axios.get('https://os.ncuos.com/api/user/profile/basic',{
         headers: {
           'Content-Type':'application/json',

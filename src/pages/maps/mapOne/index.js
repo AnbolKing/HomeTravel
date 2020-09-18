@@ -30,6 +30,7 @@ import '../config/style.css';
 import DetailOne from '../../DetailOne/index';
 import store from '../../../store/index';
 import storageUtils from '../../../utils/storge';
+import tokenUtils from '../../../utils/token';
 class mapOne extends Component {
 
   constructor(props) {
@@ -169,6 +170,10 @@ class mapOne extends Component {
     this.props.history.push('/all')
   }
   
+  componentDidMount() {
+    tokenUtils.judgeToken();
+  }
+
   render() {
     return (
       <div style={mapsStyle}>
