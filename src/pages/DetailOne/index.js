@@ -7,6 +7,7 @@ import {
 } from './style';
 import axios from 'axios';
 import store from '../../store/index';
+import storageUtils from '../../utils/storge';
 import "animate.css";
 import './style.css';
 
@@ -22,12 +23,11 @@ class DetailOne extends Component {
 
   componentDidMount() {
     let texturl = 'http://112.124.26.56:8999/obj/getone?id=' + this.state.id;
-    let token = store.getState().toJS().mapReducer.token
     axios.get(texturl,{
       headers:{
         'Content-Type':'application/json',
         'Accept':'*/*',
-        'Authorization':token
+        'Authorization':storageUtils.getToken(),
       }
     }).then(res => {
       const result = res.data;

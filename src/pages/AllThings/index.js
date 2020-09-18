@@ -20,6 +20,7 @@ import {
 } from './style';
 import store from '../../store/index';
 import axios from 'axios';
+import storageUtils from '../../utils/storge';
 import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'
 
 class AllThings extends Component {
@@ -32,13 +33,12 @@ class AllThings extends Component {
   }
 
   componentDidMount() {
-    let token = store.getState().toJS().mapReducer.token
     let url = 'http://112.124.26.56:8999/api/list';
     axios.get(url,{
       headers:{
         'Content-Type':'application/json',
         'Accept':'*/*',
-        'Authorization':token
+        'Authorization':storageUtils.getToken(),
       }
     }).then(res => {
       const result = res.data;
@@ -93,7 +93,7 @@ class AllThings extends Component {
                 <div>
                   <div className="naviText" style={naviTextStyle}>
                     恭喜
-                    <span> {store.getState().toJS().mapReducer.username}</span>
+                    <span> {storageUtils.getName()}</span>
                     ，成功集齐八个物品，奖励一份小家园用心准备的小礼物！
                     <span style={jiangpin}>奖品有限，先到先得！</span>
                     具体领取方式会在活动结束后由家园工作室官方<span style={jiangpin}>QQ:2459289916</span>

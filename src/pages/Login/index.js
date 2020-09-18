@@ -62,17 +62,6 @@ class Login extends Component {
         password:this.state.pass
       }
       //axios请求---获取token
-      //使用incu-webview
-      // getAppData().then(res => {
-      //   let token = res.user.token;
-      //   console.log(token);
-      //   const action = {
-      //     type:'get_token',
-      //     token:'passport '+result.data.token,
-      //   }
-      //   store.dispatch(action);
-      // })
-
       const result = await axios.post('https://os.ncuos.com/api/user/token',JSON.stringify(obj),{
         headers: {
           'Content-Type':'application/json',
@@ -87,6 +76,9 @@ class Login extends Component {
           token:'passport '+result.data.token,
         }
         store.dispatch(action);
+        //本地存储token
+        memoryUtils.token = 'passport '+result.data.token;
+        storageUtils.saveToken('passport '+result.data.token);
         //保存登录信息
         let user = {
           username:this.state.user,
@@ -101,7 +93,7 @@ class Login extends Component {
         headers: {
           'Content-Type':'application/json',
           'Accept':'*/*',
-          'Authorization':store.getState().toJS().mapReducer.token
+          'Authorization':storageUtils.getToken()
         }
       }).then(res => {
         const action = {
@@ -109,6 +101,7 @@ class Login extends Component {
           username:res.data.base_info.xm
         };
         store.dispatch(action);
+        storageUtils.saveName(res.data.base_info.xm);
       })
       if(result.data.status === 0) {
         this.setState({

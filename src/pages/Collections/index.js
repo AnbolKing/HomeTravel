@@ -12,7 +12,7 @@ import {
   descStyle,
   imgInsideStyle,
 } from './style';
-import store from '../../store/index';
+import storageUtils from '../../utils/storge';
 import { FrownTwoTone  } from '@ant-design/icons';
 
 class Collections extends Component {
@@ -30,14 +30,12 @@ class Collections extends Component {
 
   //进行axios请求，获得已收集的物品列表
   componentDidMount() {
-    // let username = store.getState().toJS().mapReducer.username;
-    let token = store.getState().toJS().mapReducer.token
     let url = 'http://112.124.26.56:8999/api/list';
     axios.get(url,{
       headers:{
         'Content-Type':'application/json',
         'Accept':'*/*',
-        'Authorization':token
+        'Authorization':storageUtils.getToken(),
       }
     }).then(res => {
       const result = res.data;

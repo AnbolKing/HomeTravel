@@ -28,6 +28,7 @@ import { SmileTwoTone } from '@ant-design/icons';
 import DetailOne from '../../DetailOne/index';
 import '../config/style.css';
 import store from '../../../store/index';
+import storageUtils from '../../../utils/storge';
 
 class mapThree extends Component {
 
@@ -90,14 +91,12 @@ class mapThree extends Component {
       };
       store.dispatch(action);
       //axios请求，点亮物品 Todo
-      let username = store.getState().toJS().mapReducer.username
-      let token = store.getState().toJS().mapReducer.token
-      let url = 'http://112.124.26.56:8999/api/add?id=' + mes + '&name=' + username
+      let url = 'http://112.124.26.56:8999/api/add?id=' + mes + '&name=' + storageUtils.getName();
       let res = await axios.get(url,{
         headers:{
           'Content-Type':'application/json',
           'Accept':'*/*',
-          'Authorization':token
+          'Authorization':storageUtils.getToken(),
         }
       });
       return ;
@@ -122,7 +121,7 @@ class mapThree extends Component {
       headers:{
         'Content-Type':'application/json',
         'Accept':'*/*',
-        'Authorization':token
+        'Authorization':storageUtils.getToken(),
       }
     })
     const disText = result.data.data.Text;

@@ -198,13 +198,14 @@ class FirstOne extends Component {
           token:'passport '+result.data.token,
         }
         store.dispatch(action);
+        storageUtils.saveToken('passport '+result.data.token)
       }
       //获取信息
       axios.get('https://os.ncuos.com/api/user/profile/basic',{
         headers: {
           'Content-Type':'application/json',
           'Accept':'*/*',
-          'Authorization':store.getState().toJS().mapReducer.token
+          'Authorization':storageUtils.getToken()
         }
       }).then(res => {
         const action = {
@@ -212,6 +213,7 @@ class FirstOne extends Component {
           username:res.data.base_info.xm
         };
         store.dispatch(action);
+        storageUtils.saveName(res.data.base_info.xm);
       })
     }
   }

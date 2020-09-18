@@ -29,6 +29,7 @@ import { SmileTwoTone } from '@ant-design/icons';
 import '../config/style.css';
 import DetailOne from '../../DetailOne/index';
 import store from '../../../store/index';
+import storageUtils from '../../../utils/storge';
 class mapOne extends Component {
 
   constructor(props) {
@@ -90,14 +91,13 @@ class mapOne extends Component {
       };
       store.dispatch(action);
       //axios请求，获得点亮物品信息
-      let username = store.getState().toJS().mapReducer.username
-      let token = store.getState().toJS().mapReducer.token
-      let url = 'http://112.124.26.56:8999/api/add?id=' + mes + '&name=' + username
-      let res = await axios.get(url,{
+      let url = 'http://112.124.26.56:8999/api/add?id=' + mes + '&name=' + storageUtils.getName();
+      console.log(url);
+      const result = await axios.get(url,{
         headers:{
           'Content-Type':'application/json',
           'Accept':'*/*',
-          'Authorization':token
+          'Authorization':storageUtils.getToken(),
         }
       });
       return ;
@@ -118,12 +118,11 @@ class mapOne extends Component {
   async handleGot(mes) {
     //axios请求 获得干扰物信息
     let disurl = 'http://112.124.26.56:8999/obj/getone?id=' + mes;
-    let token = store.getState().toJS().mapReducer.token
     const result = await axios.get(disurl,{
       headers:{
         'Content-Type':'application/json',
         'Accept':'*/*',
-        'Authorization':token
+        'Authorization':storageUtils.getToken(),
       }
     })
     const disText = result.data.data.Text;
